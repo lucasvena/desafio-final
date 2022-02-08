@@ -1,0 +1,120 @@
+.box {
+    border-radius: 6px;
+    height: 40px;
+    width: 80px;
+    margin: 50px auto;
+}
+
+.box-one {
+    background-color: aquamarine;
+}
+
+.box-two {
+    background-color: blueviolet;
+    /* para usar la transición necesito agregar dos valores
+    1- transition-property
+    2- transition-duration 
+        transition-property: all;
+        transition-duration: 2s;*/
+        transition: all 2s;
+    
+    }
+
+/* pseudo clase :hover que al pasar el mouse por encima del elemento va a suceder lo que le digamos entre llaves */
+
+.box:hover {
+    /* transformación solamente cuando el mouse pase por encima / scale permite agregar un número entero sin unidades de medida para modificar el elemento */
+    transform: scale(4) ;
+}
+
+
+
+.container-circle > div {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
+.circle1 {
+    background-color: blueviolet;
+    transition: all 1.5s linear;
+    /* transition-timing-function: ; meneja la curva de velocidad*/
+}
+.circle2 {
+    background-color: brown;
+    transition: all 1.5s ease;
+}
+.circle3 {
+    background-color: red;
+    transition: all 1.5s ease-in;
+}
+.circle4 {
+    background-color: cadetblue;
+    transition: all 1.5s ease-in-out;
+}
+.circle5 {
+    background-color: chartreuse;
+    transition: all 1.5s ease-out;
+}
+
+.container-circle:hover > div {
+    transform: translateX(200px);
+
+}
+
+
+
+.combinado {
+    background-color: violet;
+    height: 70px;
+    width: 70px;
+    margin: 50px auto; 
+}
+
+.combinado:hover {
+    transform: rotate(90deg) scale(2) translateY(120px);
+    transition: all 2s;
+}
+
+
+/* animaciones */
+.animaciones {
+    width: 120px;
+    height: 120px;
+    margin: 50px auto;
+    background-color: yellow;
+}
+
+.animaciones:hover {
+    /* animation-name 
+    animation-duration*/
+    /* animation-name: ;
+    animation-duration: ; */
+    animation: changeColor 4s;
+}
+
+/* Fotogramas */
+/* nos permiten controlarlo el tiempo establecido */
+/* regla keyframes */
+@keyframes changeColor {
+    0% {
+        background-color: violet;
+    }
+
+    15% {
+        border-radius: 50%;
+    }
+
+    25% {
+        width: 600px;
+    }
+
+    50% {
+        background-color: turquoise;
+        border: 4px solid black;
+    }
+
+    100% {
+        background-color: teal;
+    }
+}
